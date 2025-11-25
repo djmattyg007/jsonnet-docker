@@ -1,0 +1,18 @@
+{
+  extends: [
+    "config:base",
+    "schedule:weekends",
+    "customManagers:dockerfileVersions",
+  ],
+  packageRules: [
+    {
+      matchUpdateTypes: ["minor", "patch", "pin", "digest", "lockFileMaintenance"],
+      automerge: true,
+    },
+    {
+      groupName: "github-actions",
+      matchManagers: ["github-actions"],
+      separateMajorMinor: false,
+    },
+  ],
+}
