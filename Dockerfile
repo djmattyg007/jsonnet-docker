@@ -3,7 +3,7 @@ FROM docker.io/golang:1.25.4@sha256:698183780de28062f4ef46f82a79ec0ae69d2d22f7b1
 ENV CGO_ENABLED=0
 
 # renovate: datasource=github-releases depName=google/go-jsonnet
-ENV JSONNET_VERSION="v0.20.0"
+ENV JSONNET_VERSION="v0.21.0"
 
 RUN go install \
     "github.com/google/go-jsonnet/cmd/jsonnet@${JSONNET_VERSION}" \
