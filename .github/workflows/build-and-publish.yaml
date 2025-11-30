@@ -7,6 +7,7 @@ on:
     paths-ignore:
       - "**.md"
       - ".github/workflows/ci.yaml"
+      - "renovate.json5"
   schedule:
     # Always run at least once a month to regularly rebuild the image .
     - cron: "0 0 1 * *"
