@@ -1,6 +1,6 @@
 # jsonnet-docker
 
-Builds of go-jsonnet in a container
+Builds of go-jsonnet in a container.
 
 ## Usage
 
