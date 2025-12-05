@@ -1,4 +1,4 @@
-FROM docker.io/golang:1.25.4@sha256:698183780de28062f4ef46f82a79ec0ae69d2d22f7b160cf69f71ea8d98bf25d AS builder
+FROM docker.io/golang:1.25.5@sha256:20b91eda7a9627c127c0225b0d4e8ec927b476fa4130c6760928b849d769c149 AS builder
 
 ENV CGO_ENABLED=0
 
@@ -12,7 +12,7 @@ RUN go install \
     "github.com/google/go-jsonnet/cmd/jsonnet-lint@${JSONNET_VERSION}"
 
 
-FROM docker.io/alpine:3.22@sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412
+FROM docker.io/alpine:3.23@sha256:51183f2cfa6320055da30872f211093f9ff1d3cf06f39a0bdb212314c5dc7375
 
 COPY --from=builder /go/bin/jsonnet /usr/local/bin/
 COPY --from=builder /go/bin/jsonnetfmt /usr/local/bin/
