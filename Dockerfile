@@ -1,4 +1,4 @@
-FROM docker.io/golang:1.26.3@sha256:13605dbaf3aff39741644cc3a6ec74cac494f955d1401ffee49b55032fa8a626 AS builder
+FROM docker.io/golang:1.26.3@sha256:db1271a193b5b6cac1749d8d23c3b3564b37852836a5880ca0a65e1924f7feab AS builder
 
 ENV CGO_ENABLED=0
 
